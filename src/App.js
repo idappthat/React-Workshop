@@ -32,12 +32,16 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
+        <div>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <Button onClick={() => this._add()} text={'+'}/>
         <Button onClick={() => this._minus()} text={'-'}/>
-        <Stateless count={this.state.count} />
+        <div style={{color: this.state.count % 2 === 0 ? 'red': 'blue', paddingTop: 25, fontSize: 30}}>
+          <Stateless count={this.state.count} />
+        </div>
+        </div>
       </div>
     );
   }
